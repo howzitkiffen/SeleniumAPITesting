@@ -30,8 +30,6 @@ namespace SeleniumAPITesting
         private void InitializeComponent()
         {
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.pnSubMenuBestBuy = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -45,9 +43,17 @@ namespace SeleniumAPITesting
             this.pnAmazonDividerBottom = new System.Windows.Forms.Panel();
             this.pnAmazonLogo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.pnMenu.SuspendLayout();
             this.pnSubMenuBestBuy.SuspendLayout();
             this.pnSubPanelAmazon.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnMenu
@@ -55,7 +61,9 @@ namespace SeleniumAPITesting
             this.pnMenu.AutoScroll = true;
             this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnMenu.Controls.Add(this.btnExit);
-            this.pnMenu.Controls.Add(this.button9);
+            this.pnMenu.Controls.Add(this.panel2);
+            this.pnMenu.Controls.Add(this.panel3);
+            this.pnMenu.Controls.Add(this.panel4);
             this.pnMenu.Controls.Add(this.pnSubMenuBestBuy);
             this.pnMenu.Controls.Add(this.pnBestBuyDividerBottom);
             this.pnMenu.Controls.Add(this.pnBestBuyLogo);
@@ -66,42 +74,8 @@ namespace SeleniumAPITesting
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(200, 689);
+            this.pnMenu.Size = new System.Drawing.Size(200, 863);
             this.pnMenu.TabIndex = 0;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(115)))), ((int)(((byte)(77)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("RED", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(115)))), ((int)(((byte)(77)))));
-            this.btnExit.Location = new System.Drawing.Point(0, 530);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(200, 40);
-            this.btnExit.TabIndex = 23;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // button9
-            // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(115)))), ((int)(((byte)(77)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("RED", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(115)))), ((int)(((byte)(77)))));
-            this.button9.Location = new System.Drawing.Point(0, 490);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(200, 40);
-            this.button9.TabIndex = 22;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Visible = false;
             // 
             // pnSubMenuBestBuy
             // 
@@ -269,12 +243,104 @@ namespace SeleniumAPITesting
             this.panel1.Size = new System.Drawing.Size(200, 150);
             this.panel1.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(235)))), ((int)(((byte)(161)))));
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 538);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 124);
+            this.panel2.TabIndex = 24;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(115)))), ((int)(((byte)(77)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 80);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(200, 40);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(115)))), ((int)(((byte)(77)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(0, 40);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(200, 40);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(115)))), ((int)(((byte)(77)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(200, 40);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "button8";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 528);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 10);
+            this.panel3.TabIndex = 23;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::SeleniumAPITesting.Properties.Resources.BestBuyLogo;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 490);
+            this.panel4.Margin = new System.Windows.Forms.Padding(10);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 38);
+            this.panel4.TabIndex = 22;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(115)))), ((int)(((byte)(77)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("RED", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(115)))), ((int)(((byte)(77)))));
+            this.btnExit.Location = new System.Drawing.Point(0, 662);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnExit.Size = new System.Drawing.Size(200, 40);
+            this.btnExit.TabIndex = 25;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(71)))));
-            this.ClientSize = new System.Drawing.Size(1083, 689);
+            this.ClientSize = new System.Drawing.Size(1083, 863);
             this.ControlBox = false;
             this.Controls.Add(this.pnMenu);
             this.Name = "Main_Form";
@@ -283,6 +349,7 @@ namespace SeleniumAPITesting
             this.pnMenu.ResumeLayout(false);
             this.pnSubMenuBestBuy.ResumeLayout(false);
             this.pnSubPanelAmazon.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -292,8 +359,6 @@ namespace SeleniumAPITesting
         private System.Windows.Forms.Panel pnMenu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnAmazonLogo;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel pnSubMenuBestBuy;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
@@ -305,5 +370,12 @@ namespace SeleniumAPITesting
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnAmazonStartStop;
         private System.Windows.Forms.Panel pnAmazonDividerBottom;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
