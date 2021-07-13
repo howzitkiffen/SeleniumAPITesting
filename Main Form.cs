@@ -36,26 +36,7 @@ namespace SeleniumAPITesting
         }
 
         #region Form Hovers
-        private void pnAmazonLogo_MouseHover(object sender, EventArgs e)
-        {
-            pnAmazonLogo.BackColor = HeaderHoverColor;
-        }
 
-        private void pnBestBuyLogo_MouseHover(object sender, EventArgs e)
-        {
-            pnBestBuyLogo.BackColor = HeaderHoverColor;
-        }
-
-        private void pnAmazonLogo_MouseLeave(object sender, EventArgs e)
-        {
-            pnAmazonLogo.BackColor = HeaderDefaultColor;
-        }
-
-
-        private void pnBestBuyLogo_MouseLeave(object sender, EventArgs e)
-        {
-            pnBestBuyLogo.BackColor = HeaderDefaultColor;
-        }
         #endregion
 
         #region Other Actions/Events
@@ -67,13 +48,16 @@ namespace SeleniumAPITesting
         private void pnBestBuyLogo_MouseClick(object sender, MouseEventArgs e)
         {
             showSubMenu(pnSubMenuBestBuy);
-            showSubMenu(pnBestBuyDividerBottom);
         }
 
         private void pnAmazonLogo_MouseClick(object sender, MouseEventArgs e)
         {
             showSubMenu(pnSubPanelAmazon);
-            showSubMenu(pnAmazonDividerBottom);
+        }
+
+        private void pnNewEggLogo_MouseClick(object sender, MouseEventArgs e)
+        {
+            showSubMenu(pnNewEggSubMenu);
         }
         #endregion
 
@@ -95,7 +79,9 @@ namespace SeleniumAPITesting
         {
             if (pnSubPanelAmazon.Visible == true) { pnSubPanelAmazon.Visible = false; }
             if (pnSubMenuBestBuy.Visible == true) { pnSubMenuBestBuy.Visible = false; }
+            if (pnNewEggSubMenu.Visible ==true) { pnNewEggSubMenu.Visible = false; }
         }
+
         #endregion
 
 
