@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumAPITesting", "SeleniumAPITesting.csproj", "{0C028BFB-7D4D-49FE-8929-852D672A3391}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumAPITesting", "SeleniumAPITesting.csproj", "{0C028BFB-7D4D-49FE-8929-852D672A3391}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_SeleniumLogic", "..\C_SeleniumLogic\C_SeleniumLogic.csproj", "{05F20B77-9BFA-4BB0-9E4F-B118B341E809}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0C028BFB-7D4D-49FE-8929-852D672A3391}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C028BFB-7D4D-49FE-8929-852D672A3391}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C028BFB-7D4D-49FE-8929-852D672A3391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F20B77-9BFA-4BB0-9E4F-B118B341E809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F20B77-9BFA-4BB0-9E4F-B118B341E809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F20B77-9BFA-4BB0-9E4F-B118B341E809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F20B77-9BFA-4BB0-9E4F-B118B341E809}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
