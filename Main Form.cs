@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using C_SeleniumLogic;
 
 
 namespace SeleniumAPITesting
@@ -26,13 +27,11 @@ namespace SeleniumAPITesting
         Color HeaderDefaultColor = GLOBAL.DarkRed;
         #endregion
 
+        clsBestBuy WebUI = new clsBestBuy();
+
         private void Main_Form_Load(object sender, EventArgs e)
         {
             hideSubMenu();
-
-
-
-
         }
 
         #region Form Hovers
@@ -82,8 +81,35 @@ namespace SeleniumAPITesting
             if (pnNewEggSubMenu.Visible ==true) { pnNewEggSubMenu.Visible = false; }
         }
 
+
         #endregion
 
+        private void btnBestBuyStartStop_Click(object sender, EventArgs e)
+        {
 
+            if (btnBestBuyStartStop.Text == "Start")
+            {
+                btnBestBuyStartStop.Text = "Stop";
+                try
+                {
+                    WebUI.Get3070TI();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.StackTrace + '\r' + ex.Message);
+                }
+            }
+            else 
+            {
+                btnBestBuyStartStop.Text = "Start";
+                WebUI.Chrome.Close();
+                WebUI.Chrome.Dispose();
+            }            
+        }
+
+        private void Main_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            WebUI.CloseChromeDriver();
+        }
     }
 }

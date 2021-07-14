@@ -29,4 +29,8 @@
     <Folder Include="UserControls\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\C_SeleniumLogic\C_SeleniumLogic.csproj" />
+  </ItemGroup>
+
 </Project>

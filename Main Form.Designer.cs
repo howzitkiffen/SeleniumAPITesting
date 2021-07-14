@@ -235,9 +235,10 @@ namespace SeleniumAPITesting
             this.btnBestBuyStartStop.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnBestBuyStartStop.Size = new System.Drawing.Size(208, 53);
             this.btnBestBuyStartStop.TabIndex = 0;
-            this.btnBestBuyStartStop.Text = "button8";
+            this.btnBestBuyStartStop.Text = "Start";
             this.btnBestBuyStartStop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBestBuyStartStop.UseVisualStyleBackColor = true;
+            this.btnBestBuyStartStop.Click += new System.EventHandler(this.btnBestBuyStartStop_Click);
             // 
             // pnBestBuyDividerBottom
             // 
@@ -362,6 +363,7 @@ namespace SeleniumAPITesting
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Main_Form";
             this.Text = "Main_Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_Form_FormClosing);
             this.Load += new System.EventHandler(this.Main_Form_Load);
             this.pnMenu.ResumeLayout(false);
             this.pnNewEggSubMenu.ResumeLayout(false);
