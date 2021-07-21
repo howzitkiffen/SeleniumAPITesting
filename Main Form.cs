@@ -102,8 +102,8 @@ namespace SeleniumAPITesting
             else 
             {
                 btnBestBuyStartStop.Text = "Start";
-                WebUI.Chrome.Quit();
-
+                WebUI.Chrome.Close();
+                WebUI.Chrome.Dispose();
             }            
         }
 
