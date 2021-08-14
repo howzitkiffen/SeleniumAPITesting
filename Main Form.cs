@@ -29,9 +29,35 @@ namespace SeleniumAPITesting
 
         clsBestBuy WebUI = new clsBestBuy();
 
+        BackgroundWorker bwBB3070 = new BackgroundWorker();
+
         private void Main_Form_Load(object sender, EventArgs e)
         {
             hideSubMenu();
+            BackgroundWorkerConfiguration();
+        }
+
+        private void BackgroundWorkerConfiguration() 
+        {
+            bwBB3070.DoWork += BwBB3070_DoWork;
+            bwBB3070.RunWorkerCompleted += BwBB3070_RunWorkerCompleted;
+            bwBB3070.WorkerSupportsCancellation = true; 
+        }
+
+        private void BwBB3070_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled) 
+            {
+                WebUI.Chrome.Quit();
+                WebUI.Chrome.Dispose();
+                MessageBox.Show("CardSearch Stopped."); 
+            }
+        }
+
+        private void BwBB3070_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while (!bwBB3070.CancellationPending) { WebUI.Get3070TI(); }
+            if (bwBB3070.CancellationPending) { e.Cancel = true; }
         }
 
         #region Form Hovers
@@ -86,13 +112,13 @@ namespace SeleniumAPITesting
 
         private void btnBestBuyStartStop_Click(object sender, EventArgs e)
         {
-
+            
             if (btnBestBuyStartStop.Text == "Start")
             {
                 btnBestBuyStartStop.Text = "Stop";
                 try
                 {
-                    WebUI.Get3070TI();
+                    bwBB3070.RunWorkerAsync();
                 }
                 catch(Exception ex)
                 {
@@ -102,8 +128,7 @@ namespace SeleniumAPITesting
             else 
             {
                 btnBestBuyStartStop.Text = "Start";
-                WebUI.Chrome.Close();
-                WebUI.Chrome.Dispose();
+                if (bwBB3070.IsBusy) { bwBB3070.CancelAsync(); }
             }            
         }
 
@@ -111,5 +136,6 @@ namespace SeleniumAPITesting
         {
             WebUI.CloseChromeDriver();
         }
+
     }
 }
